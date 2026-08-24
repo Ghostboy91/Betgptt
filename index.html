@@ -240,10 +240,10 @@
     border-radius:12px;
     display:block;
     background:#000;
-    aspect-ratio:9/16;
-    max-height:640px;
+    aspect-ratio:16/9;
+    max-height:460px;
     margin:0 auto;
-    object-fit:cover;
+    object-fit:contain;
   }
   .video-caption{
     text-align:center;
@@ -391,8 +391,12 @@
     .proof-grid{ columns:2 200px; }
   }
   @media(max-width:560px){
-    .feature-grid{ grid-template-columns:1fr; }
+    .feature-grid{ grid-template-columns:1fr; gap:12px; }
     .feature-card.wide{ grid-column:span 1; }
+    .feature-card{ padding:18px 20px; }
+    .feature-icon{ font-size:20px; margin-bottom:10px; }
+    .feature-card h3{ font-size:15px; margin-bottom:6px; }
+    .feature-card p{ font-size:13.5px; }
     .proof-grid{ columns:1; }
     .nav .btn-glow{ padding:9px 14px; font-size:12px; }
     section{ padding:64px 0; }
@@ -454,15 +458,14 @@
     </div>
 
     <div class="video-frame">
-  <div class="bar"><span></span><span></span><span></span></div>
-  <video
-    controls
-    playsinline
-    style="width:100%; height:auto; display:block; border-radius:12px; background:#000;">
-    <source src="demo.mp4" type="video/mp4">
-    Ваш браузер не підтримує відео.
-  </video>
-</div>
+      <div class="bar"><span></span><span></span><span></span></div>
+      <video controls playsinline>
+        <source src="demo.mp4" type="video/mp4">
+        Ваш браузер не підтримує відео.
+      </video>
+    </div>
+    <p class="video-caption">▶ Full walkthrough of Value Bets, Correct Score &amp; Stats Lab</p>
+  </div>
 </section>
 
 <!-- ============ FEATURES ============ -->
